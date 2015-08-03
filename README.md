@@ -4,4 +4,4 @@
 * Framework use : Bootstrap & Angular
 * Plugin used : animate.css , parallax.js, waypoints.js
 
-**damaragung.com
+damaragung.com
