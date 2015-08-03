@@ -16,7 +16,8 @@
     <link href="css/mystyle.css" rel="stylesheet">
   </head>
   <body>	
-	<nav class="navbar navbar-default navbar-fixed-top"><!-- Navbar -->
+  	<!-- Navbar -->
+	<nav class="navbar navbar-default navbar-fixed-top">
 		<div class="container-fluid">
 			<!-- Brand and toggle get grouped for better mobile display -->
 			<div class="navbar-header">
@@ -38,12 +39,15 @@
 					<li><a class="smoothie" href="#we-do">Who We Are</a></li>
 					<li><a class="smoothie" href="#works">Our Works</a></li>
 					<li><a class="smoothie" href="#parse-test">Parse test</a></li>
+					<li><a target="_blank" href="https://github.com/damaragung/jackslab">GitHub repo</a></li>
 				</ul>
 			</div><!-- /.navbar-collapse -->
-		</div><!-- /.container-fluid -->
-	</nav><!-- ./Navbar -->
-
+		</div>
+	</nav>
+		
+	<!-- Content with tilt background -->
 	<section class="tilt-section">
+		<!-- Home div -->
 		<div class="tilt-container parallax-window" data-parallax="scroll" data-image-src="img/jackslab-1.jpg">
 			<article class="tilt-content" id="home">
 				<div class="container">
@@ -55,16 +59,21 @@
 				</div>		
 			</article>
 		</div>
+
+		<!-- Who We Are div -->
 		<div class="tilt-container">
 			<article class="tilt-content" id="we-are">
 				<div class="container">
 					<div class="col-md-12">
 						<h2>Who We Are</h2>
 						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ut magna velit. Quisque placerat, risus in adipiscing rhoncus, quam purus bibendum sapien, a bibendum odio leo sit amet metus. Sed sed dolor sit amet lacus luctus blandit ut a lorem. Fusce feugiat aliquam imperdiet.</p>	
+						<img class="img-responsive" src="img/jackslab-2.jpg">
 					</div>
 				</div>
 			</article>
 		</div>
+
+		<!-- What We Do div -->
 		<div class="tilt-container">
 			<article class="tilt-content" id="we-do">
 				<div class="container">
@@ -83,6 +92,8 @@
 				</div>
 			</article>
 		</div>
+
+		<!-- Our Works div -->
 		<div class="tilt-container">
 			<article class="tilt-content" id="works">
 				<div class="container">
@@ -95,13 +106,15 @@
 									<p>{{item.description}}</p>
 								</div>
 								<img class="img-responsive" ng-src="{{item.images}}">
-								
 							</div>	
+							<div class="clearfix"></div>	
 						</div>
 					</div>
 				</div>
 			</article>
 		</div>
+
+		<!-- Parse test div -->
 		<div class="tilt-container">
 			<article class="tilt-content" id="parse-test">
 				<div class="container">
@@ -128,7 +141,9 @@
 		</div>		
 	</section>
 	<div class="clearfix"></div>
-	<footer><!-- Footer -->
+
+	<!-- Footer -->
+	<footer>
 		<div class="container">			
 			<div class="col-md-3">
 				<h3>Other Links</h3>

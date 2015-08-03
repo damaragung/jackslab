@@ -56,6 +56,24 @@ $('.smoothie').click(function (e) {
 			description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
 			link: "www.google.com",
 			images: "img/Knogg_Tile_Image.png"
+		},
+		{
+			title: 'work title 2',
+			description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+			link: "www.google.com",
+			images: "img/Knogg_Tile_Image.png"
+		},
+		{
+			title: 'work title 3',
+			description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+			link: "www.google.com",
+			images: "img/Knogg_Tile_Image.png"
+		},
+		{
+			title: 'work title 4',
+			description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+			link: "www.google.com",
+			images: "img/Knogg_Tile_Image.png"
 		}
 	]
 })();
