@@ -1,13 +1,18 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="myApp">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Jack's Lab test</title>
+    <link rel="shortcut icon" href="img/ico.png" type="image/x-icon">
  
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- custom fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Raleway:800,500' rel='stylesheet' type='text/css'>
+    <link href="fonts/font-awesome.min.css" rel="stylesheet">
+    <!-- custom sytle -->
     <link href="css/mystyle.css" rel="stylesheet">
   </head>
   <body>	
@@ -15,96 +20,152 @@
 		<div class="container-fluid">
 			<!-- Brand and toggle get grouped for better mobile display -->
 			<div class="navbar-header">
-				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-target">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collaptilt-target">
 					<span class="sr-only">Toggle navigation</span>
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</button>
-				<a class="navbar-brand" href="#" data-toggle="collapse" data-target="#navbar-collapse-target">
+				<a class="navbar-brand smoothie" href="#home" data-toggle="collapse" data-target="#navbar-collaptilt-target">
 					<img src="img/logo.png" alt="" />
 				</a>
 			</div>
 			
 			<!-- Collect the nav links, forms, and other content for toggling -->
-			<div class="collapse navbar-collapse navbar-right" id="navbar-collapse-target">
+			<div class="collapse navbar-collapse navbar-right" id="navbar-collaptilt-target">
 				<ul class="nav navbar-nav">
-					<li><a href="#">Market</a></li>
-					<li><a href="#">Mooks</a></li>
+					<li><a class="smoothie" href="#we-are">Who We Are</a></li>
+					<li><a class="smoothie" href="#we-do">Who We Are</a></li>
+					<li><a class="smoothie" href="#works">Our Works</a></li>
+					<li><a class="smoothie" href="#parse-test">Parse test</a></li>
 				</ul>
 			</div><!-- /.navbar-collapse -->
 		</div><!-- /.container-fluid -->
 	</nav><!-- ./Navbar -->
-		
-			
-	<div class="container">
-		<h1>Hello, world!</h1>
 
+	<section class="tilt-section">
+		<div class="tilt-container parallax-window" data-parallax="scroll" data-image-src="img/jackslab-1.jpg">
+			<article class="tilt-content" id="home">
+				<div class="container">
+					<div class="col-md-12 home">
+						<h1>JACK'S LABS</h1>
+						<h2>X</h2>
+						<img class="img-responsive" src="img/brand.png">
+					</div> 
+				</div>		
+			</article>
+		</div>
+		<div class="tilt-container">
+			<article class="tilt-content" id="we-are">
+				<div class="container">
+					<div class="col-md-12">
+						<h2>Who We Are</h2>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ut magna velit. Quisque placerat, risus in adipiscing rhoncus, quam purus bibendum sapien, a bibendum odio leo sit amet metus. Sed sed dolor sit amet lacus luctus blandit ut a lorem. Fusce feugiat aliquam imperdiet.</p>	
+					</div>
+				</div>
+			</article>
+		</div>
+		<div class="tilt-container">
+			<article class="tilt-content" id="we-do">
+				<div class="container">
+					<div class="col-md-12">
+						<h2>What We Do</h2>
+						<div class="row">	
+							<div class="col-md-6">
+								<img class="img-responsive" src="img/diagram.png">
+							</div>	
+							<div class="col-md-6">
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ut magna velit. Quisque placerat, risus in adipiscing rhoncus, quam purus bibendum sapien, a bibendum odio leo sit amet metus. Sed sed dolor sit amet lacus luctus blandit ut a lorem. Fusce feugiat aliquam imperdiet.</p>	
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ut magna velit. Quisque placerat, risus in adipiscing rhoncus, quam purus bibendum sapien, a bibendum odio leo sit amet metus. Sed sed dolor sit amet lacus luctus blandit ut a lorem. Fusce feugiat aliquam imperdiet.</p>	
+							</div>
+						</div>
+					</div>
+				</div>
+			</article>
+		</div>
+		<div class="tilt-container">
+			<article class="tilt-content" id="works">
+				<div class="container">
+					<div class="col-md-12">
+						<h2>Our Works</h2>
+						<div class="row" ng-controller="PortoController as portfolio">	
+							<div class="col-md-3" ng-repeat="item in portfolio.items">
+								<div class="thumb-overlay">
+									<h3><a ng-href="{{item.link}}">{{item.title}}</a></h3>
+									<p>{{item.description}}</p>
+								</div>
+								<img class="img-responsive" ng-src="{{item.images}}">
+								
+							</div>	
+						</div>
+					</div>
+				</div>
+			</article>
+		</div>
+		<div class="tilt-container">
+			<article class="tilt-content" id="parse-test">
+				<div class="container">
+					<h2>Parse test</h2>
 
-		<div class="row">
-		  	<div class="col-lg-6">
-			    <form id="messageForm" role="">
-				  <div class="form-group">
-				  	<input type="text" name="message" class="form-control" placeholder="Input text">
-				  </div>
-				  <button type="submit" class="btn btn-default">Submit</button>
-				</form>
+					<div class="row">
+					  	<div class="col-lg-6 col-md-push-3">
+						    <form id="messageForm" role="">
+							  <div class="form-group">
+							  	<input type="text" name="message" class="form-control" placeholder="Input text">
+							  </div>
+							  <button type="submit" class="btn btn-default">Submit</button>
+							</form>
+						</div>
+					</div><!-- /.row -->
+					<div class="row">
+					  	<div class="col-lg-6 col-md-push-3">
+							<div id="messageBox" class="alert alert-success" role="alert">retrieved "Parse.Object" data will be displayed here</div>
+							<button id="btnRetrieve" type="submit" class="btn btn-default">Retrieve</button>
+						</div>
+					</div><!-- /.row -->
+				</div>	
+			</article>
+		</div>		
+	</section>
+	<div class="clearfix"></div>
+	<footer><!-- Footer -->
+		<div class="container">			
+			<div class="col-md-3">
+				<h3>Other Links</h3>
+				<ul>
+					<li><a href="#">F.A.Q</a></li>
+					<li><a href="#">Privacy Policy</a></li>
+				</ul>
 			</div>
-		</div><!-- /.row -->
-		<div class="row">
-		  	<div class="col-lg-6">
-				<div id="messageBox" class="alert alert-success" role="alert">Parse Object data will be displayed here</div>
-				<button id="btnRetrieve" type="submit" class="btn btn-default">Retrieve</button>
+			<div class="col-md-3">
+				<h3>Social Media</h3>
+				<ul class="socmedBtn">
+					<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+					<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+					<li><a href="#"><i class="fa fa-instagram"></i></a></li>
+				</ul>
 			</div>
-		</div><!-- /.row -->
-	</div>
+			<div class="col-md-3 pull-right">			
+				<img class="img-responsive" src="img/brand.png">
+			</div>
+		</div>
+	</footer><!-- ./Footer -->
+	
  
     <!-- jQuery -->
-    <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>	
+    <script type="text/javascript" src="js/vendor/jquery-1.9.1.min.js"></script>		
+    <!-- angular js -->
+    <script type="text/javascript" src="js/vendor/angular.min.js"></script>
     <!-- bootstrap js -->
-    <script type="text/javascript" src="js/bootstrap.min.js"></script>	
+    <script type="text/javascript" src="js/vendor/bootstrap.min.js"></script>	
+    <!-- parallax js -->
+    <script type="text/javascript" src="js/vendor/parallax.min.js"></script>	
+    <!-- waypoints js -->
+    <script type="text/javascript" src="js/vendor/waypoints.min.js"></script>	
     <!-- parse js -->
-    <script type="text/javascript" src="js/parse-1.5.0.min.js"></script>
-	<script type="text/javascript">
-		Parse.initialize("ZOyg51NksyxcHYWfJ1mbDRnOUnB6EpchgzqLPd09", "Zo2Gp5vxkEl4Ls2TFb8rPWHKExWWKDoEr6cNtvpV");
-
-		// create a new subclass of Parse.Object.
-		var MessageData = Parse.Object.extend("TestMessage");
-
-		//create new Parse object
-    	parseMsg = new MessageData();
-
-    	//create submit form function 
-		$('#messageForm').submit(function(e){
-			//on form submit
-  			e.preventDefault();
-
-  			//get data from form
-		    var data = {
-		        message: $(e.target).find("[name='message']").val()
-		    }
-
-    		//match the key values from the form, to your parse class, then save it
-			parseMsg.save({
-			    message: data.message
-			}, {
-			    //if successful
-			    success: function(parseMsg){
-			    	alert(parseMsg.get('message') + " successfully saved to Parse.")
-			    },
-
-			    error: function(parseMsg, error) {
-			        console.log(parseMsg);
-			        console.log(error);
-			    }
-			})
-		});
-
-		//assign trigger to retrieve button to get parseMsg
-		$( "#btnRetrieve" ).on( "click", function() {
-			$("#messageBox").html(parseMsg.get('message'));
-		});
-
-	</script>	
+    <script type="text/javascript" src="js/vendor/parse-1.5.0.min.js"></script>
+    <script type="text/javascript" src="js/myparse.js"></script>
+    <!-- custom js -->
+    <script type="text/javascript" src="js/custom.js"></script>
   </body>
 </html>
