@@ -1,3 +1,6 @@
+/** Website Template - by Damar Agung 2015 **/
+/** made for Jack's Lab applicant test **/
+
 body {
     font-family: 'Raleway',sans-serif;
     font-size: 14px;
@@ -5,7 +8,6 @@ body {
     color: #e91364;
     background-color: #333;
 }
-
 
 h1, h2, h3{ font-weight: 800;}
 h1 { color: #e91364; font-size: 62px; font-weight: 800; line-height: 72px;text-transform: uppercase; }
